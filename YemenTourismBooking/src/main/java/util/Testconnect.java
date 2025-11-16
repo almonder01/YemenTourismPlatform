@@ -8,7 +8,7 @@ public class Testconnect {
 	public static void main(String[] args) {
 		String url = "jdbc:mysql://localhost:3306/demo";
 		String username = "root";
-		String password = "77MoNdEr200!";
+		String password = "0000";
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
