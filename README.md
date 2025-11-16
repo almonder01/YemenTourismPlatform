@@ -6,8 +6,7 @@ A full-stack web application designed to promote tourism in Yemen by showcasing 
 
 ## 📌 Overview
 
-The **Yemen Tourism Website** is a dynamic tourism platform developed by a team of three students.
-It allows users to:
+The **Yemen Tourism Website** is a dynamic tourism platform developed by a team of three students. It allows users to:
 
 * Explore Yemeni destinations (e.g., Socotra, Aden, Taiz)
 * View detailed travel packages
@@ -64,17 +63,27 @@ Built using the **MVC architecture**, the system separates logic, UI, and data l
 
 ---
 
-## 📸 Screenshots
+## 📦 Required Libraries (Manual Setup)
 
-*(Add screenshots after uploading into `assets/` folder)*
+Since this project is **not Maven-based**, you need to download and add the following JARs to the project:
+
+| Library           | Purpose                             | Download Link                                                          |
+| ----------------- | ----------------------------------- | ---------------------------------------------------------------------- |
+| `jbcrypt-0.4.jar` | Password hashing                    | [Download](https://mvnrepository.com/artifact/org.mindrot/jbcrypt/0.4) |
+| `jstl-1.2.jar`    | JSP standard tags (core, fmt, etc.) | [Download](https://mvnrepository.com/artifact/javax.servlet/jstl/1.2)  |
+
+**Steps to add JARs in Eclipse:**
+
+1. Copy the downloaded JARs to:
 
 ```
-/assets
- ├── homepage.png
- ├── destination.png
- ├── booking.png
- └── admin-dashboard.png
+YemenTourism/WebContent/WEB-INF/lib
 ```
+
+2. Right-click the project → **Refresh** (F5)
+3. Project → **Clean** → Select project → OK
+
+> This will resolve `BCrypt cannot be resolved` and `Cannot find the tag library descriptor` errors.
 
 ---
 
@@ -99,6 +108,7 @@ src/
  │
  └── main/webapp
       ├── WEB-INF
+      │    └── lib          → Place all required JARs here
       ├── pages (JSP views)
       ├── assets (images/css/js)
       └── META-INF
@@ -116,38 +126,43 @@ Main tables used:
 * **bookings**
 * **feedback**
 
-Each table includes proper primary keys, foreign keys, and relationships.
-
-You can import the database using:
+Import the database using:
 
 ```
 /database/schema.sql
 ```
 
+Update database credentials in:
+
+```java
+DatabaseUtil.java
+```
+
 ---
 
-## 🚀 How to Run the Project
+## 🚀 How to Run the Project in Eclipse
 
 ### **Prerequisites**
 
 * JDK 8+
 * Apache Tomcat 9+
 * MySQL Server
-* IDE (IntelliJ / Eclipse / NetBeans)
+* Eclipse IDE for Enterprise Java Developers
 
-### **Setup**
+### **Setup Steps**
 
 1. Clone the repository
-2. Import project as **Java Web App**
-3. Import SQL file into MySQL
-4. Update database credentials in:
+2. Import project into Eclipse:
 
-```
-DatabaseUtil.java
-```
+   * **File → Import → Existing Projects into Workspace → Select root directory → Finish**
+3. Add required JARs (see **Required Libraries**)
+4. Configure **Tomcat Runtime**:
 
-5. Deploy to Tomcat
-6. Run the server and open:
+   * Project → Properties → Targeted Runtimes → Choose Tomcat
+5. Import SQL file into MySQL
+6. Update database credentials in `DatabaseUtil.java`
+7. **Clean and Build Project**
+8. Run the project on Tomcat:
 
 ```
 http://localhost:8080/YemenTourism
