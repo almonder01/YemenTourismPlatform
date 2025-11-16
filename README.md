@@ -138,7 +138,7 @@ You can import the database using:
 ### **Setup**
 
 1. Clone the repository
-2. Import project as **Maven** or **Java Web App**
+2. Import project as **Java Web App**
 3. Import SQL file into MySQL
 4. Update database credentials in:
 
