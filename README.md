@@ -179,7 +179,7 @@ Password: admin123
 
 ## 👥 Team Members
 
-* **Ba Dokhon Ali Yeslam**
+* **Ba Dokhon Ali Yeslam** | **Github:** Allosh2309
 * **Bentaher Akmonder Awed**
 * **Ghanmi Adem**
 
