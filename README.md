@@ -179,9 +179,9 @@ Password: admin123
 
 ## 👥 Team Members
 
-* **Ba Dokhon Ali Yeslam** | **Github:** Allosh2309
-* **Bentaher Akmonder Awed**
-* **Ghanmi Adem**
+* **Ba Dokhon Ali** | [Github: Aloosh2309](https://github.com/Aloosh2309)
+* **Bentaher Almonder** |  [Github: Almonder](https://github.com/almonder01)
+* **Ghanmi Adem** | ...
 
 ---
 
