@@ -63,29 +63,17 @@ Built using the **MVC architecture**, the system separates logic, UI, and data l
 
 ---
 
-## 📦 Required Libraries (Manual Setup)
+## 📦 Required Libraries (Already Included in `WEB-INF/lib`)
 
-Since this project is **not Maven-based**, you need to download and add the following JARs to the project:
+The project already contains the necessary JARs in the `WEB-INF/lib` folder:
 
-| Library           | Purpose                             | Download Link                                                          |
-| ----------------- | ----------------------------------- | ---------------------------------------------------------------------- |
-| `jbcrypt-0.4.jar` | Password hashing                    | [Download](https://mvnrepository.com/artifact/org.mindrot/jbcrypt/0.4) |
-| `jstl-1.2.jar`    | JSP standard tags (core, fmt, etc.) | [Download](https://mvnrepository.com/artifact/javax.servlet/jstl/1.2)  |
+1. `jakarta.servlet.jsp.jstl-3.0.1.jar` – JSTL implementation for Jakarta EE 10
+2. `jakarta.servlet.jsp.jstl-api-3.0.0.jar` – JSTL API for Jakarta EE 10
+3. `jbcrypt-0.4.jar` – Password hashing
+4. `mysql-connector-j-9.2.0.jar` – MySQL JDBC driver
 
-**Steps to add JARs in Eclipse:**
-
-1. Copy the downloaded JARs to:
-
-```
-YemenTourism/WebContent/WEB-INF/lib
-```
-
-2. Right-click the project → **Refresh** (F5)
-3. Project → **Clean** → Select project → OK
-
-> This will resolve `BCrypt cannot be resolved` and `Cannot find the tag library descriptor` errors.
-
----
+**Tested on:**  
+* Tomcat v10.1 Server at localhost
 
 ## 🧱 System Architecture
 
@@ -144,25 +132,36 @@ DatabaseUtil.java
 
 ### **Prerequisites**
 
-* JDK 8+
-* Apache Tomcat 9+
+* Apache Tomcat 10
 * MySQL Server
 * Eclipse IDE for Enterprise Java Developers
 
+---
+
 ### **Setup Steps**
 
-1. Clone the repository
-2. Import project into Eclipse:
+1. **Clone the repository**
+2. **Import the project into Eclipse:**
 
-   * **File → Import → Existing Projects into Workspace → Select root directory → Finish**
-3. Add required JARs (see **Required Libraries**)
-4. Configure **Tomcat Runtime**:
+   * File → Import → Existing Projects into Workspace → Select root directory → Finish
 
-   * Project → Properties → Targeted Runtimes → Choose Tomcat
-5. Import SQL file into MySQL
-6. Update database credentials in `DatabaseUtil.java`
-7. **Clean and Build Project**
-8. Run the project on Tomcat:
+3. **Configure Tomcat Runtime:**
+
+   * Project → Properties → Targeted Runtimes → Choose Tomcat 10
+
+4. **Import the SQL file into MySQL** to create the necessary database and tables.
+5. **Update database credentials** in `DatabaseUtil.java` (username, password, database URL)
+6. **Ensure required libraries are in `WEB-INF/lib`**:
+
+   * `jakarta.servlet.jsp.jstl-3.0.1.jar` – JSTL implementation for Jakarta EE 10  
+   * `jakarta.servlet.jsp.jstl-api-3.0.0.jar` – JSTL API for Jakarta EE 10  
+   * `jbcrypt-0.4.jar` – Password hashing  
+   * `mysql-connector-j-9.2.0.jar` – MySQL JDBC driver  
+
+7. **Clean and Build Project:**  
+   * Project → Clean → Select project → OK
+
+8. **Run the project on Tomcat:**  
 
 ```
 http://localhost:8080/YemenTourism
