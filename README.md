@@ -1,5 +1,10 @@
 # 🌍 Yemen Tourism Website
 
+## 🎥 Project Demo
+<a href="https://youtu.be/cK70fHSMBP8">
+  <img width="1889" height="947" alt="Screenshot 2026-01-31 101607" src="https://github.com/user-attachments/assets/ea05650d-e1e2-4d87-aa54-032a91766876" />
+</a>
+
 A full-stack web application designed to promote tourism in Yemen by showcasing destinations, travel packages, and offering an integrated booking system.
 
 ---
@@ -168,6 +173,8 @@ http://localhost:8080/YemenTourism
 ```
 
 ### **Admin Login**
+
+* Run from Util: * `SetupAdminServlet.java`.
 
 ```
 Username: admin
