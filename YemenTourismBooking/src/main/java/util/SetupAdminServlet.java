@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-//@WebServlet("/setup-initial-admin-account")
+@WebServlet("/setup-initial-admin-account")
 public class SetupAdminServlet extends HttpServlet {
 
     //@Override 
